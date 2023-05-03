@@ -7,8 +7,10 @@
     <title>WebTV</title>
     <style>
       body{
-        background: #222;
+        background-color: #222;
         color:white;
+        font-family: Arial, sans-serif;
+        padding: 0;
       }
       #film {
         display: block;
@@ -21,27 +23,55 @@
         overflow: auto;
         padding: 11px;
         border: double;
+        margin-bottom: 20px;
     } 
+    #header{
+        background: #333;
+        height: 50px;
+        margin-bottom: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #header h1{
+        margin: 0;
+        font-size: 24px;
+      }
     #filmlinkek{
       text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
     #filmlinkek a{
       text-decoration: none;
-      color:aqua;
+      color: aqua;
+      font-size: 24px;
+      font-weight: bold;
+      border: 2px solid aqua;
+      border-radius: 8px;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+    #filmlinkek a:hover {
+      background-color: aqua;
+      color: #222;
     }
     </style>
 </head>
 <body>
-    <div id='filmlinkek'>
-    <a href='javascript:' onClick='filmlejatszo(1)'>1</a> |
-    <a href='javascript:' onClick='filmlejatszo(2)'>2</a> |
-    <a href='javascript:' onClick='filmlejatszo(3)'>3</a>
-</div>
+  <div id="header">
+    <h1>WebTV</h1>
+  </div>
 
 
 <iframe id='film' width=560 height=315 scrolling='no' frameborder=1></iframe>
 
-
+<div id='filmlinkek'>
+  <a href='javascript:' onClick='filmlejatszo(1)'>1</a>
+  <a href='javascript:' onClick='filmlejatszo(2)'>2</a>
+  <a href='javascript:' onClick='filmlejatszo(3)'>3</a>
+</div>
 <script>
 
   function filmlejatszo(x)
