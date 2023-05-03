@@ -7,6 +7,37 @@
     <title>WebTV</title>
 </head>
 <body>
-    
+    <div id='filmlinkek'>
+
+    <a href='javascript:' onClick='filmlejatszo(1)'>Az asszonyok </a>
+    <a href='javascript:' onClick='filmlejatszo(2)'>Tisza-tó és Abádszalók       </a>
+    <a href='javascript:' onClick='filmlejatszo(3)'>Fertő-tó, Fertőrákos         </a>
+
+</div>
+
+
+<iframe id='film' width=560 height=315 scrolling='no' frameborder=1></iframe>
+
+
+<script>
+
+  function filmlejatszo(x)
+  {
+    if(x==1)  film.src="https://www.youtube.com/watch?v=eOkxbcpTJBQ"
+    if(x==2)  film.src="https://www.youtube.com/embed/Z_JIbN22ckE?autoplay=1&rel=0"
+    if(x==3)  film.src="https://www.youtube.com/embed/OkUE6YxaNPo?autoplay=1&rel=0"
+  }
+
+  /*
+	A linkek végén az autoplay=1 gondoskodik az automatikus indításról,
+	a rel=0 pedig a arról, hogy a videó végén ne jelenjenek meg más,
+	kapcsolódó videóajánlások az ablakban.
+  */
+
+</script>
+
+
+
+
 </body>
 </html>
